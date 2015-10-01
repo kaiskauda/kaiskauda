@@ -132,7 +132,10 @@ hr {
     margin: -10px 0px -10px 0px;
     cursor: pointer;
 }
-
+.navbar-menu{
+	overflow: hidden;
+	width: 100%;
+}
 
 .nav-menu > li {
     width: 20%;
@@ -154,27 +157,22 @@ hr {
     font-size: 0.9em;
 }
 @media #{$medium-screen}  {
-    .navbar-menu {
-        width: 100%;
-        height: 56px;
-        overflow: hidden;
-    }
     .nav-menu > li {
-        height: 56px;
         display:table;
+         height: 56px;
     }
-    .nav-menu > li > a {
+     .nav-menu > li > a {
+        display:table;
+        width:100%;
+         height: 56px;
+    }
+
+    .nav-menu > li div {
         display:table-cell;
         vertical-align: middle;
+        height: 56px;
     }
 
-}
-
-@media #{$large-screen} {
-    .navbar-menu {
-        width: 100%;
-        overflow: hidden;
-    }
 }
 
 
@@ -290,6 +288,9 @@ hr {
 }
 .page-banner{
 	padding:100px 0px;
+}
+
+#kys-html > .page-banner{
 	background:linear-gradient(rgba(78, 91, 151, 0.4),rgba(78, 91, 151, 0.4)),url({{ site.baseurl }}/img/sil1opate.png)center no-repeat;
 	color:#f8f8f8;
 	background-size: auto 100%;
@@ -302,8 +303,15 @@ hr {
     margin: 0 auto;
     border: 0;
 }
+#mas-hr{
+	max-width: 800px;
+    height: 0.5px; //wtf
+    background: radial-gradient(rgba(0,0,0,.5) 30%, transparent 100%);
+    margin: 0 auto;
+    border: 0;
+}
 
-.kys-html > section > .row{
+#kys-html > section > .row{
 	max-width: 1200px;
 	margin: 0 auto;
 	padding:40px 20px 0px 20px;
@@ -329,16 +337,16 @@ hr {
 	position:relative;
 }
 
-.kys-html .inline ul a ,.link{
+#kys-html .inline ul a ,.link{
 	color:#106C97;
 
 }
-.kys-html .inline ul li {
+#kys-html .inline ul li {
 	border-bottom:1px solid #e6e6e6;
 	padding:8px 0px 4px 1.2em;
     text-indent: -0.6em;
 }
-.kys-html .inline ul a:hover, .link:hover {
+#kys-html .inline ul a:hover, .link:hover {
 	transition: color 0.1s linear;
 	color:$cp0;
 }
