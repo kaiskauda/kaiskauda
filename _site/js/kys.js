@@ -56,11 +56,6 @@ function navLocator() {
 
 }
 
-
-
-
-
-
 var lastFocus;
 var fixedNavState = 0;
 var screenHeight;
