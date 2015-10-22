@@ -120,12 +120,16 @@ hr {
     float: left;
 }
 .navbar-left > div {
-    cursor: pointer;
+
     height: 100px;
     display: inline-block;
     vertical-align:middle;
     margin-right: 20px;
 }
+.navbar-left * {
+	cursor: pointer !important;
+}
+
 
 .navbar-right {
     float: right;
@@ -215,7 +219,7 @@ hr {
 	width: 100%;
 	height: 100%;
 	padding: 10px 0px;	
-    background-color: $c-primary;
+    background-color: lighten( $cp0 , 4%);
     color:white;
 }
 
@@ -242,7 +246,7 @@ hr {
 
 
 .nav-menu > li div:hover {
-    background-color: $c-p-h;
+    background-color: lighten( $cp0 , 1%);
     color: $c-5;
     cursor: pointer;
     transition: background-color 0.3s linear, color 0.3s linear;
@@ -254,7 +258,7 @@ hr {
 }
 
 .page-header {
-    font-size: 50px;
+    font-size: 3.125em;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
@@ -266,7 +270,7 @@ hr {
 #index-header-hr {
     max-width: 800px;
     height: 0.5px; //wtf
-    background: radial-gradient(#5C5C5C 30%, transparent 100%);
+    background: radial-gradient(transparent 30%, transparent 100%);
     margin: 0 auto;
     border: 0;
 }
@@ -322,7 +326,7 @@ hr {
 .index-cards > .header {
 	color: $main-text-op;
     background-color:inherit; 
-    font-weight:600;    
+    font-weight:600;
 }
 
 .index-cards > .content {
@@ -339,7 +343,6 @@ hr {
 
 
 .index-html>.row>.page-header {
-    //color: #444;
 }
 
 .page-header.small {
@@ -372,21 +375,22 @@ hr {
 
 
 .index-carousel{
+
+
 	position: absolute;
+	min-height: 100%;
   	height:100%;  
 	top:50%;
 	left:50%;
 	transform:translate(-50%,-50%);
 	width:100vw;
-	//z-index: 100;
-	//overflow: hidden;
 }
 
 
 
 .index-carousel > div {
     position: absolute;
-    animation: round length($carousel-list) * $index-carousel-duration infinite; // amount of images * loop
+    animation: round length($carousel-list) * $index-carousel-duration infinite;
     opacity: 0;
     width: 100%;
     height: 100%;
@@ -401,7 +405,6 @@ hr {
         background-repeat: no-repeat;
    		background-position:center;
    		-webkit-filter: blur(1px);
-
 }
 
 .index-carousel > div:before{
@@ -413,7 +416,7 @@ hr {
         background-repeat: no-repeat;
    		background-position:center;
     	transform:scale(2);
-    	-webkit-filter: blur(30px) grayscale(0.2);
+    	-webkit-filter: blur(30px) grayscale(0.1);
 }
 
 @for $i from 1 through length($carousel-list) {
@@ -424,6 +427,7 @@ hr {
 
     .index-carousel >div:nth-child(#{$i}):before, .index-carousel >div:nth-child(#{$i}):after{
     	    	background-image:url($n);
+    	    	
     };
 }
 
@@ -431,14 +435,21 @@ hr {
 	overflow: hidden;
 }
 
-.index-html .page-header {
-	position:relative;
-	animation: roundColors $index-carousel-duration * 2 infinite;
-	-webkit-filter: contrast(1);
-	color:#444;
-  	text-shadow: 2px 1px 3px rgba(244,244,244,0.4);
-	//animation-delay: $index-carousel-duration / 2;
+
+.index-html .ph-wrap {
+    position: relative;
+    background-image: inherit;
+    color: #FFF;
+    font-size:18px;
+    text-shadow:0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+    font-weight: 600 !important; 
+
+    //animation: roundColors $index-carousel-duration * 2 infinite;
+    //animation-delay: $index-carousel-duration / 2;
 }
+
 
 
 @keyframes roundColors{
@@ -677,7 +688,7 @@ section:last-of-type{
 	position: relative;
 	text-align:left;
 	padding: 50px;
-	font-size:40px;
+	font-size:3.215em;
 	z-index: 1;
 	color: #fff;
 	color: $main-text;
