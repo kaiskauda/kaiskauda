@@ -6,7 +6,7 @@ window.onload = function() {
 
 function nav() {
     var windowloc = window.pageYOffset + screenPlower;
-    //console.log('page: ' + window.pageYOffset + " plow: " + screenPlower);
+    console.log('page: ' + window.pageYOffset + " plow: " + screenPlower + " myVarloc: " + windowloc + " firstNav: " + firstNav);
     if (windowloc > firstNav && fixedNavState === 0) {
         document.getElementById('fixed-nav').className = 'fixed-nav fixed-nav-fixed';
         fixedNavState = 1;
@@ -98,7 +98,7 @@ function elementAligning() {
     screenHeight = window.innerHeight;
     var screenWidth = window.innerWidth;
     screenPlower = screenHeight * navTop;
-    firstNav = document.getElementById('vidausorganai').offsetTop;
+    firstNav = document.getElementById('firstRow').offsetTop + 40;
     document.getElementById('fixed-nav').style.top = firstNav + 'px';
 
     if (screenWidth > 1200) {
@@ -118,6 +118,5 @@ function elementAligning() {
 
 
     }
-
 
 }
