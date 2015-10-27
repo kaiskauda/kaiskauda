@@ -718,28 +718,44 @@ section:last-of-type{
 }
 
 .secondary-banner > .page-header{
+	display:inline-block;
 	position: relative;
 	text-align:left;
-	padding: 25px 0px 25px 80px;
-	font-size:3.215em;
+	padding: 20px 0px 20px 60px;
+	font-size:2.5em;
 	z-index: 1;
 	color: #fff;
 	//color: $main-text;
+}
+.page-header > div{
+		display:inline-block;
+		position: relative;
 
 }
+.page-header div div:first-child{
+	transform: translateY(-0.5em);
+		position:relative;
+}
+.page-header div div:last-child{
+	position:absolute;
+	transform: translateY(-50%);
+}
+
+
+
 .secondary-banner{
 	position:relative;
 }
 .secondary-banner:before {
     content: '';
-    height: 55px;
-    width: 55px;
+    height: 45px;
+    width: 45px;
     background: url(/kaiskauda//img/white-plus.png) center no-repeat;
     background-size: cover;
     display: block;
     position: absolute;
     z-index: 1;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .secondary-banner:after{
@@ -750,7 +766,7 @@ section:last-of-type{
 	right:27%;
 	top:0;
 	z-index: 0;
-	background:linear-gradient(90deg, rgba(251, 155, 122, 1) 60%,rgba(251, 155, 122, 0.5) 90%,transparent);
+	background:linear-gradient(90deg, rgba(251, 155, 122, 1) 50%,rgba(251, 155, 122, 0.8) 95%,transparent);
 }
 
 .text-list.decimal, .text-list.circle{
@@ -772,6 +788,7 @@ section:last-of-type{
 }
 
 
+
 .text-box span {
 	color:$cp0;
 	font-weight: bold;
@@ -781,4 +798,8 @@ section:last-of-type{
 	color: $main-text-h;
 	font-size:0.6em;
 	font-weight: normal;
+}
+
+section > .row:last-child {
+	padding-bottom: 50px !important;
 }
