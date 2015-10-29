@@ -355,7 +355,7 @@ hr {
 }
 .brown-canvas{
 	position:relative;
-	background-color: #f8f8f8;
+	background-color: #F8F8F8 !important;
 /*	background-color:  #E18B6E !important;
 	background: -webkit-radial-gradient(rgba(255,255,255,0.4) 13%, rgba(0,0,0,0) 14%), -webkit-radial-gradient(rgba(255,255,255,0.4) 13%, rgba(0,0,0,0) 14%);
     background: -moz-radial-gradient(rgba(255,255,255,0.4) 13%, rgba(0,0,0,0) 14%), -moz-radial-gradient(rgba(255,255,255,0.4) 13%, rgba(0,0,0,0) 14%);
@@ -366,8 +366,8 @@ hr {
     background-size:60px 60px;
     */
 }
-
-/*.brown-canvas:before{
+/*
+.brown-canvas:before{
 	content: '';
 	position:absolute;
 	height: 100%;
@@ -416,7 +416,7 @@ hr {
     width: 100%;
     height: 100%;
 }
-/*
+
 .index-carousel > div:after{
 		content:'';
     	position:absolute;
@@ -427,7 +427,7 @@ hr {
    		background-position:center;
    		//-webkit-filter: blur(1px);
 }
-
+/*
 .index-carousel > div:before{
 	    content:'';
     	position:absolute;
@@ -445,12 +445,12 @@ hr {
     .index-carousel >div:nth-child(#{$i}) {
         animation-delay: $index-carousel-duration * ($i - 1);
     };
-/*
+
     .index-carousel >div:nth-child(#{$i}):before, .index-carousel >div:nth-child(#{$i}):after{
     	    	background-image:url($n);
     	    	
     };
-    */
+    
 }
 
 .index-html{
