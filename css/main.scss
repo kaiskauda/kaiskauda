@@ -117,7 +117,6 @@ footer > div.uppder-footer {
     background-color: #FFF;
     height: auto;
     max-width: 1200px;
-    width: 80%;
     margin: 0 auto;
     color: $main-text;
        
@@ -471,7 +470,7 @@ hr {
     	background-size:cover;
         background-repeat: no-repeat;
    		background-position:center;
-   		//-webkit-filter: blur(1px);
+   		-webkit-filter: grayscale(0.5);
 }
 /*
 .index-carousel > div:before{
@@ -931,14 +930,15 @@ section > .row:last-child > .text-box {
 }
 
 
-#bz-html .page-banner{
+#bz-html .page-banner,#gy-html .page-banner{
 	padding: 30px 0px;
 	color:#FFF;
 	background-color: darken($cp0, 8%);
 }
-#bz-html .page-banner .page-header{
+#bz-html .page-banner .page-header,#gy-html .page-banner .page-header{
 	font-family: "Open Sans";
-	font-weight: 500;
+	font-weight: 600;
+	font-size: 4em;
 }
 
 #gy-html .fixed-nav {
@@ -951,23 +951,23 @@ section > .row:last-child > .text-box {
     font-family: "Roboto";
     font-weight: 300;
 }
-.section-header a{
+.section-header label{
 	display: inline-block;
 	width: 100%;
 	border-bottom: 1px solid $cp2;
 }
-.section-header a *{
+.section-header label *{
 	cursor: pointer;
 }
-.section-header div{
+.section-header > label > div:nth-child(-n+2){
 	display:inline-block;
 }
-.section-header div:first-child{
+.section-header > label > div:nth-child(1){
 	font-size: 1.5em;
 	float: left;
 	padding-top: 19px;
 }
-.section-header div:last-child{
+.section-header > label > div:nth-child(2){
 	float: right;
 	font-size: 1em;
 	padding: 25px;
@@ -981,7 +981,7 @@ section > .row:last-child > .text-box {
 .section-header i{
 	color: inherit;
 }
-.section-header a:hover div:last-child{
+.section-header label:hover div:last-child{
 	background-color: $cp0-l;
 	color: #FFF;
 	transition: all 0.3s linear, color 0.0001s linear;
@@ -997,10 +997,12 @@ section > .row:last-child > .text-box {
 }
 .nav-content ul li > div{
 	display: inline-block;
-	width: 40%;
-	padding: 0 50px;
+	width: 49%;
 	text-align: left;
-
+}
+.nav-content ul li > div:first-child{
+	padding: 0 50px 0 50px;
+	vertical-align: top;
 }
 .nav-content ul li{
 	text-align: center;
@@ -1014,4 +1016,75 @@ section > .row:last-child > .text-box {
 }
 .description{
 	margin-top: 20px;
+}
+.where-when{
+	width:100%;
+}
+.where-when td{
+	width: 49%;
+
+
+}
+.where-when tr td:last-child{
+	background-color: $cp0-l;
+	color: white;
+	height: 100%;
+	vertical-align: bottom;
+    padding: 5px;
+    font-weight: 600;
+}
+.where-when tr td:first-child{
+	color: $cp0-l;
+	height: 100%;
+	vertical-align: bottom;
+	padding: 5px 0;
+}
+.event > div {
+	padding: 10px 0;
+}
+.event{
+	padding: 10px 0;
+}
+.announcers p{
+	padding-bottom: 10px;
+}
+.announcers p:first-child{
+	font-weight: 600;
+	color: $cp0-l;
+}
+
+.announcers p:nth-child(n+2){
+	padding-left: 30px;
+	position: relative;
+}
+.announcers p:nth-child(n+2):after{
+	content: '';
+	background: url(/kaiskauda//img/white-plus-brown.png) center no-repeat;
+	height: 20px;
+    width: 20px;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+input:checked + label > div:last-child:before {
+  content:"Sumažinti";
+}
+input + label > div:last-child:before {
+
+  content:"Išplėsti";
+}
+
+input:checked + label + .nav-content {
+  display: block;
+}
+
+input{
+	position: absolute;
+    display: none;
+}
+#r-html{
+	padding-bottom:50px;
 }
