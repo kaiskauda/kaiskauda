@@ -220,6 +220,13 @@ hr {
 	margin-left:34%;
 }
 
+.banner{
+	height:100px;
+	width:100%;
+	background: url({{ site.baseurl }}img/banner.png) center no-repeat;
+	background-size:1884px 100px;
+}
+
 
 
 .nav {
@@ -299,7 +306,7 @@ hr {
 
 .page-content {
     margin: 0px auto;
-    min-height: calc(100vh - 138px);
+    
 }
 
 .page-header {
@@ -324,6 +331,8 @@ hr {
 	max-width:1200px;
 	margin:0px auto;
 	position:relative;
+	padding-left: 20px;
+    padding-right: 20px;
 
 }
 .index-html > .row:nth-child(2) {
@@ -382,9 +391,6 @@ hr {
 }
 
 
-.index-html > .row:first-child {
-	padding:8% 0;
-}
 
 
 .index-html>.row>.page-header {
@@ -533,18 +539,19 @@ hr {
 #index-background .row{
 	width: 65%;
 	min-width: 650px;
+	padding-left: 0;
+	padding-right: 0;
+}
+.index-html > .row:first-child {
+	padding:10% 0;
 }
 
-
-
 @media #{$large-screen} {
-
-
-	/*.index-carousel{
+    /*.index-carousel{
 	margin: 0 auto;
     width: 100vw;
 	}*/
-/*
+    /*
 	.index-carousel > div:after{
 	margin: 0 auto;
     width: 100%;
@@ -554,16 +561,30 @@ hr {
 	}*/
 }
 
-
-@media screen and (min-width:1200px){
-/*	.index-carousel > div:after{
+@media screen and (min-width:1200px) {
+    /*	.index-carousel > div:after{
 		background-size: cover;
 	}
 */
-
-.index-html > .row:first-child {
-	padding:8% 0;
+    .page-content {
+        margin: 0px auto;
+        min-height: calc(100vh - 138px);
+    }
 }
+
+@media screen and (max-width:1200px) {
+    #index-background .row {
+        width: 80%;
+    }
+
+
+}
+
+
+@media screen and (max-width:700px) {
+    #index-background .row {
+        width: 100%;
+    }
 
 
 }
@@ -1087,4 +1108,8 @@ input{
 }
 #r-html{
 	padding-bottom:50px;
+}
+#gy-html .row{
+	width:73%;
+	margin: 0;
 }
