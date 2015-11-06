@@ -341,19 +341,19 @@ hr {
 }
 
 .index-cards-color-wrap {
-	padding: 30px 0px 30px 60px;
 	min-width:650px;
 	width: 100%;
 	margin:0 auto;
 }
 .index-cards-wrap{
-	width:500px;
+	width:550px;
 	margin:0 auto;
+	padding: 30px 10px;
 }
 
 
 .index-cards {
-	padding: 15px 0px 15px 0px;
+	padding: 15px 0px 15px 40px;
     overflow: hidden;
     color: $main-text-op;
     font-family: "Roboto"; 
@@ -370,7 +370,7 @@ hr {
 	background-size: 30px 30px;
 	display: block;
 	position:absolute;
-	left: -40px;
+	left: 0px;
 	
 }
 
@@ -407,8 +407,7 @@ hr {
 }
 .brown-canvas{
 	position:relative;
-	background-color: #F8F8F8 !important;
-/*	background-color:  #E18B6E !important;
+	background-color:  #E18B6E !important;
 	background: -webkit-radial-gradient(rgba(255,255,255,0.4) 13%, rgba(0,0,0,0) 14%), -webkit-radial-gradient(rgba(255,255,255,0.4) 13%, rgba(0,0,0,0) 14%);
     background: -moz-radial-gradient(rgba(255,255,255,0.4) 13%, rgba(0,0,0,0) 14%), -moz-radial-gradient(rgba(255,255,255,0.4) 13%, rgba(0,0,0,0) 14%);
     background: radial-gradient(rgba(255,255,255,0.4) 13%, rgba(0,0,0,0) 14%), radial-gradient(rgba(255,255,255,0.4) 13%, rgba(0,0,0,0) 14%); 
@@ -416,7 +415,9 @@ hr {
     background-position: 0 0, 30px 30px;
     -webkit-background-size:60px 60px; 
     background-size:60px 60px;
-    */
+        border-right: 15px solid #FB9B7A;
+    border-left: 15px solid #FB9B7A;
+    
 }
 /*
 .brown-canvas:before{
@@ -1139,4 +1140,8 @@ input{
 #gy-html .row{
 	width:73%;
 	margin: 0;
+}
+
+.feight{
+	background-color: #F8F8F8 !important;
 }
