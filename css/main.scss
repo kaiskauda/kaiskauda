@@ -266,6 +266,7 @@ hr {
     //background-color: lighten( $cp0 , 4%);
     display: table-cell;
     vertical-align: bottom;
+    text-align: center;
     cursor: pointer;
     height: 56px;
     border-bottom: 6px solid lighten( $cp0 , 4%);
@@ -295,14 +296,15 @@ hr {
     border-bottom: 7px solid lighten( $cp0 , 0%);
     //transition: border-bottom 0.1s linear;
 }
-
-    .nav-menu:after {
-    	    content: '';
-   			position: absolute;
-    		width: calc((100% - 1107px) / 2);
-    		height: 50px;
-   			border-bottom: 6px solid lighten($cp0 ,4%);;
+.nav-menu:after {
+    content: '';
+    position: absolute;
+    width: calc((100% - 1107px) / 2);
+    height: 50px;
+    border-bottom: 6px solid lighten($cp0, 4%);
+    ;
 }
+
 
 
 .page-content {
@@ -593,9 +595,19 @@ hr {
 
 
 }
+@media screen and (max-width: 1110px){
+	#index-background .row {
+        width: 100%;
+    }
+    .nav-menu>li div {
+    padding: 10px 10px 0px 10px;
+    vertical-align: middle;
+	}
+}
 
 
-@media screen and (max-width:800px) {
+
+@media screen and (max-width:850px) {
     #index-background .row {
         width: 100%;
     }
@@ -619,25 +631,25 @@ hr {
 
 
 #kys-html > .page-banner{
-	background:linear-gradient(rgba(78, 91, 151, 0.4),rgba(78, 91, 151, 0.4)),url({{ site.baseurl }}/img/sil1opate.png)center no-repeat;
+	background:linear-gradient(rgba(78, 91, 151, 0.4),rgba(78, 91, 151, 0.4)),url({{ site.baseurl }}/img/sil1croped.jpg)center no-repeat;
 	color:#f8f8f8;
-	background-size: auto 100%;
+	    background-size: cover;
 }
 
-#kys-hr {
+#sg-html > .page-banner{
+	background:linear-gradient(rgba(78, 91, 151, 0.4),rgba(78, 91, 151, 0.4)),url({{ site.baseurl }}/img/ocean-people.jpg)center no-repeat;
+	color:#f8f8f8;
+	background-size: cover;
+}
+
+#kys-hr,#mas-hr {
     max-width: 800px;
     height: 0.5px; //wtf
     background: radial-gradient(#f8f8f8 30%, transparent 100%);
     margin: 0 auto;
     border: 0;
 }
-#mas-hr{
-	max-width: 800px;
-    height: 0.5px; //wtf
-    background: radial-gradient(rgba(0,0,0,.5) 30%, transparent 100%);
-    margin: 0 auto;
-    border: 0;
-}
+
 
 #kys-html > section > .row, #sg-html > section > .row{
 	padding:0px 20px 0px 20px;
@@ -1136,10 +1148,6 @@ input{
 }
 #r-html{
 	padding-bottom:50px;
-}
-#gy-html .row{
-	width:73%;
-	margin: 0;
 }
 
 .feight{
