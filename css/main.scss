@@ -244,6 +244,7 @@ hr {
 	height: 60px;
 	margin: 4px 4px;
 	cursor: pointer;
+	margin-left: 2%;
 
 }
 
@@ -275,6 +276,7 @@ hr {
     flex-basis: 0;
     flex-grow: 2;
     align-items: center;
+    margin-right: 2%;
 }
 .nav-menu a {
    //width: calc(100%/7);
@@ -564,7 +566,7 @@ hr {
 @for $i from 1 through length($carousel-list) {
     $n: "{{ site.baseurl }}img/" + nth($carousel-list, $i);
     .index-carousel >div:nth-child(#{$i}) {
-        animation-delay: $index-carousel-duration * ($i - 1);
+        animation-delay: $index-carousel-duration * ($i - 1) - 5;
     };
 
     .index-carousel >div:nth-child(#{$i}):before, .index-carousel >div:nth-child(#{$i}){
@@ -597,11 +599,7 @@ hr {
     background: rgba(0, 0, 0, 0.5);
     width:100%;
     height:100%;
-    //animation: roundColors $index-carousel-duration * 2 infinite;
-    //animation-delay: $index-carousel-duration / 2;
 }
-
-
 
 @keyframes roundColors{
   #{$keyframe-step}{color:#FFF;}
@@ -882,8 +880,8 @@ section:nth-child(odd){
 	padding: 20px 0px 20px 60px;
 	font-size:2.5em;
 	z-index: 1;
-	color: #fff;
-	//color: $main-text;
+	//color: #fff;
+	color: $main-text;
 }
 .page-header > div{
 		display:inline-block;
@@ -904,13 +902,13 @@ section:nth-child(odd){
 
 .secondary-banner{
 	position:relative;
-	margin-bottom:40px;
+	padding:20px 0;
 }
 .secondary-banner:before {
     content: '';
     height: 45px;
     width: 45px;
-    background: url(/kaiskauda//img/white-plus.png) center no-repeat;
+    background: url(/kaiskauda//img/white-plus-brown.png) center no-repeat;
     background-size: cover;
     display: block;
     position: absolute;
@@ -918,7 +916,7 @@ section:nth-child(odd){
     margin-top: 20px;
 }
 
-.secondary-banner:after{
+/*.secondary-banner:after{
 	content: ' ';
 	width:100vw;
 	height:100%;
@@ -927,7 +925,7 @@ section:nth-child(odd){
 	top:0;
 	z-index: 0;
 	background:linear-gradient(90deg, rgba(251, 155, 122, 0.85) 85%,transparent);
-}
+}*/
 
 .text-list.decimal, .text-list.circle{
 	 padding-left: 2em;
