@@ -316,7 +316,7 @@ hr {
 .nav-menu > a:hover {
     color: $cp0-l;
     border-bottom: 2px solid $cp0-l;
-    transition: color 0.3s linear;
+    transition: all 0.3s linear;
 }
 /*.nav-menu > li:hover div {
     //background-color: lighten( $cp0 , 1%);
