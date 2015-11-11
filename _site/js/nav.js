@@ -13,6 +13,7 @@ function nav() {
     } else if (windowloc < firstNav && fixedNavState === 1) {
         document.getElementById('fixed-nav').style.top = firstNav + 'px';
         document.getElementById('fixed-nav').className = 'fixed-nav fixed-nav-absolute';
+        lastFocus = '';
         fixedNavState = 0;
         removeAllClass('active-nav');
     } else if ((fixedNavBot > (footerTop - window.pageYOffset)) && (fixedNavState === 1)) {
@@ -45,10 +46,9 @@ function navLocator() {
          }else{
              var currentFocus = document.querySelector(window.location.hash);
          }
-       
         lastHash = window.location.hash;
     }    
-    console.log('lastFocus: '+lastFocus + " currentFocus: " + currentFocus.id);
+    //console.log('lastFocus: '+lastFocus + " currentFocus: " + currentFocus.id);
     //fixes finding items 2 levels deep
     if (currentFocus.classList.contains('nav-locator') && lastFocus != currentFocus.id) 
         {
@@ -106,7 +106,7 @@ var elementFromPointXLocation;
 // var textArray;
 var textRangesArray = [];
 //for styling, delete after
-var navTop = 0.3;
+var navTop = 0.35;
 var lastHash;
 var footerTop;
 var fixedNavHeight;
@@ -117,8 +117,16 @@ function kysInit() {
    	elementAligning();
     nav();
     window.onresize = elementAligning;
-    window.onscroll = nav;
+    window.addEventListener("scroll", nav);
+    /*//window.addEventListener("hashchange", scrollFunc);
+    window.onhashchange = scrollFunc;*/
 }
+
+// scroll 53px higher because of fixed nav.
+/*function scrollFunc (){
+    event.preventDefault();
+    window.scrollTo(window.scrollX, window.scrollY - 53);
+}*/
 
 function navExtend(arg1, clr) {
     var elm = document.getElementById(arg1);
