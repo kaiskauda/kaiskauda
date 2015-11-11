@@ -60,8 +60,7 @@ $index-carousel-duration: 10s;
 
 
 $carousel-list: 'index (1).jpg','index (2).jpg','index (3).jpg',
-'index (4).jpg','index (5).jpg',
-'index (6).jpg';
+'index (4).jpg','index (5).jpg';
 
 $keyframe-step: (100% / length($carousel-list));
 $keyframe-step-two: ((100% / length($carousel-list)) * 2);
