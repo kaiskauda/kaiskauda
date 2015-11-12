@@ -59,8 +59,7 @@ $cp0-l: lighten($cp0 , 4%);
 $index-carousel-duration: 10s;
 
 
-$carousel-list: 'index (1).jpg','index (2).jpg','index (3).jpg',
-'index (4).jpg','index (5).jpg';
+$carousel-list: 'index (1).jpg','index (2).jpg','index (3).jpg';
 
 $keyframe-step: (100% / length($carousel-list));
 $keyframe-step-two: ((100% / length($carousel-list)) * 2);
@@ -552,6 +551,13 @@ hr {
    #{$keyframe-step-two}{opacity:0;}
 } 
 
+.padding-top{
+	padding-top:50px !important;
+}
+.padding-bottom{
+	padding-bottom: 50px !important;
+}
+
 
 @media #{$large-screen} {
     /*.index-carousel{
@@ -577,6 +583,15 @@ hr {
     .page-content {
         min-height: calc(100vh - 138px);
     }
+    .padding-top.full-height{
+    	//padding-top: 100px !important;
+
+    }
+       .padding-bottom.full-height{
+
+    	padding-bottom: 220px !important;
+    }
+
     /*.nav-logos{
     	margin-left: calc((100% - 1107px) / 2);
     }
@@ -904,12 +919,6 @@ section > .row:last-child > .text-box {
 	padding-bottom: 50px !important;
 }
 
-.padding-top{
-	padding-top:50px !important;
-}
-.padding-bottom{
-	padding-bottom: 50px !important;
-}
 
 .text-box > table{
 	width:100%;
@@ -1155,7 +1164,9 @@ input{
 }
 
 .register{
-	font-size: 1.2em;
+	font-size: 1.25em;
+	color: $cp0-l;
+
 }
 
 .nav-locator, .address-city {
