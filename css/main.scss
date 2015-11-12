@@ -557,7 +557,9 @@ hr {
 .padding-bottom{
 	padding-bottom: 50px !important;
 }
-
+.padding-top-twice{
+	padding-top:100px !important;
+}
 
 @media #{$large-screen} {
     /*.index-carousel{
@@ -583,14 +585,14 @@ hr {
     .page-content {
         min-height: calc(100vh - 138px);
     }
-    .padding-top.full-height{
-    	//padding-top: 100px !important;
-
-    }
-       .padding-bottom.full-height{
+    .padding-bottom.full-height{
 
     	padding-bottom: 220px !important;
     }
+    .padding-top-twice{
+	padding-top:80px !important;
+	}
+
 
     /*.nav-logos{
     	margin-left: calc((100% - 1107px) / 2);
@@ -685,7 +687,7 @@ hr {
 	color:$cp0;
 }
 
-.page-intro  ul ul{
+.page-intro  ul ul, #bz-html ul ul{
 	padding: 0px 0 0px 2em;
 }
 
