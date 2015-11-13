@@ -69,15 +69,19 @@ $keyframe-step-two: ((100% / length($carousel-list)) * 2);
 * {
     margin: 0;
     padding: 0;
-    -webkit-touch-callout: none;
+    cursor: default;
+    box-sizing: border-box;
+}
+
+header,footer,.page-banner,#fixed-nav {
+	-webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    cursor: default;
-    box-sizing: border-box;
 }
+
 
 body {
     color: #444;
@@ -88,7 +92,7 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-        cursor: pointer;
+    cursor: pointer;
 }
 
 a:active {
@@ -362,9 +366,15 @@ hr {
 	flex-direction: row;
 	align-items:stretch;
 	justify-content: space-around;
-
 }
 
+.index-cards-wrap a {
+	display: flex;
+	align-items:stretch;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0 10px;
+}
 
 .index-cards {
 	font-size: 21px;
@@ -374,17 +384,23 @@ hr {
     overflow: visible;
     background: #fff;
     border: 1px solid #eaeaea;
-    //max-width: 250px;
-    //min-height:200px;
-    margin: 0 10px;
+    
     display: flex;
     flex-flow: column;
     align-items:stretch;
     flex-grow: 1;
     flex-basis: 0;
+    cursor:pointer;
 }
 
-
+.index-cards:hover{
+	background: rgba(204,188,0,0.1);
+	transition: all 1s ease-out;
+	
+}
+.index-cards div{
+	cursor:pointer;
+}
 
 
 .index-cards > div {
@@ -405,7 +421,6 @@ hr {
 }
 
 .index-cards > .content {
-    background-color: inherit;
     font-weight: 300;
     font-size: 0.84em;
     font-family: Comfortaa;
