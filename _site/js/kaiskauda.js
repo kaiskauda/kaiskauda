@@ -5,15 +5,15 @@ mobileOrDesktopKS();
 
 //different name so it wouldnt clash with other js
 function mobileOrDesktopKS() {
-		if ((screen.width <= 800) && (mobileMenuOn === 0)) {
-		mobileMenuOn = 1;
+    if ((screen.width <= 800) && (mobileMenuOn === 0)) {
+        mobileMenuOn = 1;
         document.getElementById('mobile-menu').addEventListener('click', mobileNav);
-        window.addEventListener('hashchange',function(){
-        	document.getElementById('mobile-menu').dataset.toggle = 'off';
+        window.addEventListener('hashchange', function() {
+            document.getElementById('mobile-menu').dataset.toggle = 'off';
         });
 
-        addEventListenerLoop(document.querySelectorAll('[data-tab-target]'),"click",mobileTopMenu);
-        addEventListenerLoop(document.querySelectorAll('[data-tab-toggle]'),"click",mobileTabMenu);
+        addEventListenerLoop(document.querySelectorAll('[data-tab-target]'), "click", mobileTopMenu);
+        addEventListenerLoop(document.querySelectorAll('[data-tab-toggle]'), "click", mobileTabMenu);
     }
 
 }
@@ -24,18 +24,18 @@ function mobileNav() {
     var mobileMenuState = mobileMenu.dataset.toggle;
 
     if (mobileMenuState === 'off') {
-        
+
 
         //add active-tab class to currently open nav location
-        var pointer = document.elementFromPoint(30,(window.innerHeight / 2)).parentNode.id;
-        if(pointer != ""){
-        document.querySelector('[data-target=\''+pointer+'\']').classList.add('active-tab');
-        document.querySelector('[data-target=\''+pointer+'\']').parentNode.classList.add('active-tab');
-        document.querySelector('[data-target=\''+pointer+'\']').parentNode.previousElementSibling.classList.add('active-tab');
-}
+        var pointer = document.elementFromPoint(30, (window.innerHeight / 2)).parentNode.id;
+        if ((pointer != "" )&&( pointer != null) && ( document.querySelector('[data-target=\'' + pointer + '\']')  != null) ) {
+            document.querySelector('[data-target=\'' + pointer + '\']').classList.add('active-tab');
+            document.querySelector('[data-target=\'' + pointer + '\']').parentNode.classList.add('active-tab');
+            document.querySelector('[data-target=\'' + pointer + '\']').parentNode.previousElementSibling.classList.add('active-tab');
+        }
         mobileMenu.dataset.toggle = 'on';
         //add active-url class to mobile navigations open window menu
-        var currUrl = /\/kaiskauda\/(.*)\//.exec(document.URL);
+        var currUrl = /\/www.kaiskauda.lt\/(.*)\//.exec(document.URL);
         if (currUrl === null) {
             document.getElementById('renginiai').classList.add('active-url');
         } else if (currUrl[1] != null) {
@@ -44,19 +44,19 @@ function mobileNav() {
 
     } else {
         mobileMenu.dataset.toggle = 'off';
-       removeAllClass('active-tab');
+        removeAllClass('active-tab');
     }
 }
 
 //adds removes top level mobile menu tabs
 function mobileTopMenu() {
-	document.getElementById(this.dataset.tabTarget).classList.toggle("active-url");
+    document.getElementById(this.dataset.tabTarget).classList.toggle("active-url");
 };
 
 //adds removes nested level mobile menu tabs
 function mobileTabMenu() {
-	console.log(this);
-	this.classList.toggle("active-tab");
+    console.log(this);
+    this.classList.toggle("active-tab");
 };
 
 function addEventListenerLoop(elements, evnt, func) {
@@ -71,18 +71,18 @@ function addEventListenerLoop(elements, evnt, func) {
 var fixedTrap;
 var headerState = 0;
 
-fixedTrap= document.querySelector("section").offsetTop;
+fixedTrap = document.querySelector("section").offsetTop;
 fixedNav();
 window.addEventListener("scroll", fixedNav);
 
 
-function fixedNav (){
-	var windowLoc = window.pageYOffset;
-	if ((windowLoc > fixedTrap) && (headerState === 0) ) {
-		document.getElementById('header-fixed').classList.toggle("active");
-		headerState = 1;
-	} else if((windowLoc < fixedTrap) && (headerState === 1) ){
-		document.getElementById('header-fixed').classList.toggle("active");
-		headerState = 0;
-	}
+function fixedNav() {
+    var windowLoc = window.pageYOffset;
+    if ((windowLoc > fixedTrap) && (headerState === 0)) {
+        document.getElementById('header-fixed').classList.toggle("active");
+        headerState = 1;
+    } else if ((windowLoc < fixedTrap) && (headerState === 1)) {
+        document.getElementById('header-fixed').classList.toggle("active");
+        headerState = 0;
+    }
 }

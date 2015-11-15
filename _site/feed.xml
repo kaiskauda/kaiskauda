@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kai Skauda</title>
-    <description></description>
-    <link>/kaiskauda/</link>
-    <atom:link href="/kaiskauda/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 15 Nov 2015 07:15:32 +0200</pubDate>
-    <lastBuildDate>Sun, 15 Nov 2015 07:15:32 +0200</lastBuildDate>
+    <description>Informacija apie onkologinį skausmą ir jo gydymą.</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 15 Nov 2015 13:47:46 +0200</pubDate>
+    <lastBuildDate>Sun, 15 Nov 2015 13:47:46 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
   </channel>
