@@ -1,9 +1,8 @@
 # Site settings
-url: "/kaiskauda"
 title: Kai Skauda
 email: info@kaiskauda.lt
-description: > # Onkologinio skausmo pagalba
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
+description: Informacija apie onkologinį skausmą ir jo gydymą.
+
 
 # Build settings
 markdown: kramdown
