@@ -815,7 +815,7 @@ section:nth-child(even) {
     content: '';
     height: 45px;
     width: 45px;
-    background: url(/kaiskauda//img/white-plus-brown.png) center no-repeat;
+    background: url({{site.baseurl}}/img/white-plus-brown.png) center no-repeat;
     background-size: cover;
     display: block;
     position: absolute;
