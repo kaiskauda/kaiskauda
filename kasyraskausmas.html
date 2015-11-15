@@ -134,26 +134,6 @@ permalink: /skausmas/
             </div>
         </div>
     </section>
-    <div id="fixed-nav" class="fixed-nav fixed-nav-absolute">
-        <ul id="n-l">
-            <li class='fixed-nav-master nav-1' onclick="navExtend('nav-1',this)"><a>Onkologiniai Skausmai</a></li>
-            <ul id="nav-1">
-                <li id='vidausorganai-nav'><a href="#vidausorganai">Auglio invazija į vidaus organus</a></li>
-                <li id='kaulus-nav'><a href="#kaulus">Auglio invazija į kaulus</a></li>
-                <li id='nugarossmegenis-nav'><a href="#nugarossmegenis">Auglio spaudimas į nugaros smegenis</a></li>
-                <li id='kaululuziai-nav'><a href="#kaululuziai">Patologiniai kaulų lūžiai</a></li>
-                <li id='minkstuosiusaudinius-nav'><a href="#minkstuosiusaudinius">Auglio invazija į minkštuosius audinius</a></li>
-                <li id='biopsijos-nav'><a href="#biopsijos">Chirurginis vėžio gydymas, biopsijos ir jų pasekmės</a></li>
-                <li id='chemoterapija-nav'><a href="#chemoterapija">Chemoterapija, radioterapija, hormoninė terapija, imunoterapija</a></li>
-                <li id='nervu-nav'><a href="#nervu">Nervų pažeidimai, sukelti tiesiogiai vėžio ir/arba jo gydymo</a></li>
-            </ul>
-            <li onclick="navExtend('nav-2',this)"><a>Įvertink Savo Skausmą</a></li>
-            <ul id="nav-2">
-                <li id='koksskausmas-nav'><a href='#koksskausmas'> Kokį skausmą aš patiriu?</a></li>
-                <li id='skausmoskale-nav'><a href='#skausmoskale'> Skausmo skalė</a></li>
-                <li id='skausmozodynas-nav'><a href='#skausmozodynas'> Skausmo žodynas</a></li>
-            </ul>
-        </ul>
-    </div>
+   {% include kys-nav.html %}
 </div>
 <script src="{{ site.baseurl }}/js/nav.js"></script>

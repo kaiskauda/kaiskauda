@@ -1,5 +1,16 @@
 window.onload = function() {
-    kysInit();
+    window.addEventListener("resize", mobileOrDesktop);  
+    mobileOrDesktop();
+}
+function mobileOrDesktop() {
+    if (screen.width > 800) {
+        kysInit();
+    } else if (screen.width <= 800) {
+        if (kysInitState === 1) {
+            window.removeEventListener("resize", elementAligning);
+            window.removeEventListener("scroll", nav);
+        }
+    }
 }
 
 
@@ -110,23 +121,18 @@ var navTop = 0.35;
 var lastHash;
 var footerTop;
 var fixedNavHeight;
+var kysInitState = 0;
 
 function kysInit() {
+    kysInitState = 1;
     lastFocus = 'none';
-    // textArray = document.getElementsByClassName('nav-locator');
    	elementAligning();
     nav();
-    window.onresize = elementAligning;
+    window.addEventListener("resize", elementAligning);
     window.addEventListener("scroll", nav);
-    /*//window.addEventListener("hashchange", scrollFunc);
-    window.onhashchange = scrollFunc;*/
 }
 
-// scroll 53px higher because of fixed nav.
-/*function scrollFunc (){
-    event.preventDefault();
-    window.scrollTo(window.scrollX, window.scrollY - 53);
-}*/
+
 
 function navExtend(arg1, clr) {
     var elm = document.getElementById(arg1);
@@ -149,12 +155,13 @@ function elementAligning() {
     screenHeight = window.innerHeight;
     var screenWidth = window.innerWidth;
     screenPlower = screenHeight * navTop;
-    firstNav = document.getElementById('firstRow').offsetTop;
+    firstNav = document.getElementById('firstRow').offsetTop + 50;
     footerTop = document.querySelector('footer').offsetTop
     fixedNavBot = screenHeight - document.getElementById('n-l').clientHeight;
     document.getElementById('fixed-nav').style.top = firstNav + 'px';
 
     if (screenWidth > 1200) {
+        
         var leftMargin = ((screenWidth - 1200) / 2) - 16;
         //console.log(leftMargin);
         document.getElementById('fixed-nav').style.left = leftMargin + 900 + 'px';
