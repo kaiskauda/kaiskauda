@@ -24,14 +24,16 @@ function mobileNav() {
     var mobileMenuState = mobileMenu.dataset.toggle;
 
     if (mobileMenuState === 'off') {
-        mobileMenu.dataset.toggle = 'on';
+        
 
         //add active-tab class to currently open nav location
         var pointer = document.elementFromPoint(30,(window.innerHeight / 2)).parentNode.id;
+        if(pointer != ""){
         document.querySelector('[data-target=\''+pointer+'\']').classList.add('active-tab');
         document.querySelector('[data-target=\''+pointer+'\']').parentNode.classList.add('active-tab');
         document.querySelector('[data-target=\''+pointer+'\']').parentNode.previousElementSibling.classList.add('active-tab');
-
+}
+        mobileMenu.dataset.toggle = 'on';
         //add active-url class to mobile navigations open window menu
         var currUrl = /\/kaiskauda\/(.*)\//.exec(document.URL);
         if (currUrl === null) {
