@@ -1141,7 +1141,7 @@ section > .row:last-child > .text-box {
 
 .announcers p:nth-child(n+2):after {
     content: '';
-    background: url(/kaiskauda//img/white-plus-brown.png) center no-repeat;
+    background: url({{site.baseurl}}/img/white-plus-brown.png) center no-repeat;
     height: 20px;
     width: 20px;
     background-size: cover;
