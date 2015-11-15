@@ -1,9 +1,8 @@
 # Site settings
-#baseurl: "/kaiskauda"
+url: "/kaiskauda"
 title: Kai Skauda
 email: info@kaiskauda.lt
 description: > # Onkologinio skausmo pagalba
-baseurl: "/kaiskauda" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 
 # Build settings
