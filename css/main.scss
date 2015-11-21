@@ -1123,13 +1123,12 @@ section > .row:last-child > .text-box {
 }
 
 
-/*  Enable after its in "renginiai"
+
 .nav-content{
 	display: none;
 	font-family: "Open Sans";
-}*/
+}
 
-#r-html,
 #am-html {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1170,9 +1169,7 @@ section > .row:last-child > .text-box {
     padding-top: 5px;
 }
 
-.nav-content.expanded {
-    display: block;
-}
+
 
 .nav-content ul li > div {
     display: inline-block;
